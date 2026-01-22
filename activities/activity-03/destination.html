@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shibuya - The Epicenter of Modern Japanese Culture</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: linear-gradient(135deg, #1a237e 0%, #4a148c 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 2rem;
+        }
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .last-updated {
+            font-style: italic;
+            color: #e0e0e0;
+            margin-top: 1rem;
+        }
+        nav {
+            background-color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: #1a237e;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        nav a:hover, nav a.active {
+            background-color: #1a237e;
+            color: white;
+        }
+        main {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+        h2 {
+            color: #1a237e;
+            border-bottom: 3px solid #4a148c;
+            padding-bottom: 0.7rem;
+            margin: 2rem 0 1rem;
+        }
+        h3 {
+            color: #4a148c;
+            margin: 1.5rem 0 1rem;
+        }
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+        .highlight-box {
+            background-color: #f3e5f5;
+            border-left: 5px solid #7b1fa2;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        li {
+            margin-bottom: 0.8rem;
+        }
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .card {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-top: 4px solid #1a237e;
+        }
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            color: #666;
+            border-top: 1px solid #ddd;
+        }
+        .external-link {
+            color: #1a237e;
+            font-weight: 600;
+        }
+        @media (max-width: 768px) {
+            nav ul { flex-direction: column; gap: 0.5rem; align-items: center; }
+            h1 { font-size: 2rem; }
+            .container { padding: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER with title and external/relative/internal links -->
+        <header>
+            <h1>Shibuya - The Epicenter of Modern Japanese Culture</h1>
+            <p>The frenetic and scrambling center of modern Japanese culture</p>
+            <div class="last-updated">Information based on source updated: December 19, 2025</div>
+            
+            <!-- Link examples as required by assignment -->
+            <div style="margin-top: 1.5rem;">
+                <!-- External Link (Absolute Path) -->
+                <a href="https://www.japan.travel/en/" target="_blank" style="color: #ffcc80; margin: 0 10px;">Official Japan Travel Guide (External)</a>
+                
+                <!-- Relative Link -->
+                <a href="tokyo-itinerary.html" style="color: #ffcc80; margin: 0 10px;">My Tokyo Itinerary (Relative Link)</a>
+                
+                <!-- Internal Link (Bookmark) -->
+                <a href="#getting-there" style="color: #ffcc80; margin: 0 10px;">Jump to "How to Get There"</a>
+            </div>
+        </header>
+        
+        <!-- NAVIGATION -->
+        <nav>
+            <ul>
+                <li><a href="your_theme_page.html" class="active">Shibuya Travel Page</a></li>
+                <li><a href="second_page.html">Tokyo Districts Guide</a></li>
+                <li><a href="#top-attractions">Top Attractions</a></li>
+                <li><a href="#shopping">Shopping</a></li>
+            </ul>
+        </nav>
+        
+        <!-- MAIN CONTENT -->
+        <main>
+            <section>
+                <h2>Experience Shibuya</h2>
+                <p>Artistic shots of Shibuya's iconic crossing continue to feature on the pages of global fashion and travel magazines, and for good reason. The chaotic, yet miraculously organized crossing has become a symbol of Tokyo's dynamism, and represents Shibuya—Japan's trend-setting powerhouse dedicated to fashion and arts.</p>
+                
+                <p>I love exploring Shibuya because it perfectly captures the energy of modern Tokyo. There's always something new to discover, from hidden art galleries in Oku-Shibuya to the latest fashion trends in Shibuya109. The contrast between the massive crowds at the scramble crossing and the quiet, hip bars in backstreets creates an unforgettable urban experience.</p>
+                
+                <div class="highlight-box">
+                    <h3>Essential Tips for Shibuya</h3>
+                    <ul>
+                        <li>Jostle in the crossing—Shibuya's iconic intersection</li>
+                        <li>Cutting-edge fashion and modern lifestyle shopping</li>
+                        <li>Movies, music, books - immerse yourself in Shibuya's art scene</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <!-- Bookmark target for internal link -->
+            <section id="getting-there">
+                <h2>How to Get There</h2>
+                <p>In addition to JR Lines, Shibuya Station is also on the Keio Inokashira Line, the Tokyu Toyoko Line, Tokyu Den-en-toshi Line, and Tokyo Metro's Ginza, Hanzomon and Fukutoshin Lines.</p>
+                
+                <h3>Travel Times to Shibuya Station:</h3>
+                <ol>
+                    <li>From Haneda Airport: 55 minutes by Limousine Bus, or 45 minutes by train.</li>
+                    <li>From Narita Airport: one hour 55 minutes by Limousine Bus, or one hour 40 minutes by train.</li>
+                    <li>From Shinjuku Station: 7 minutes on the JR Yamanote Line.</li>
+                    <li>From Tokyo Station: 23 minutes on the JR Yamanote Line.</li>
+                </ol>
+            </section>
+            
+            <div class="content-grid">
+                <!-- Shopping Section -->
+                <section class="card" id="shopping">
+                    <h3>Shopping Hub for Fashionistas</h3>
+                    <p>The streets of Shibuya continue to be responsible for global fashion trend-setting.</p>
+                    <ul>
+                        <li><strong>Shibuya109:</strong> Mecca for fashion-conscious teenagers</li>
+                        <li><strong>Shibuya Hikarie & Seibu:</strong> Sophisticated fashion and dining complexes</li>
+                        <li><strong>Jinnan area:</strong> Distinctive select shops</li>
+                        <li><strong>Hands or Loft:</strong> Modern lifestyle megastores for creators</li>
+                        <li><strong>Don Quijote:</strong> Quirky souvenirs and discount goods</li>
+                    </ul>
+                </section>
+                
+                <!-- Entertainment Section -->
+                <section class="card" id="top-attractions">
+                    <h3>Shibuya Sky & Entertainment City</h3>
+                    <p>Shibuya's dynamic and ever-changing nature brings new commercial facilities.</p>
+                    <ul>
+                        <li><strong>Shibuya Sky:</strong> 360° panoramic view from 230m height</li>
+                        <li><strong>Shibuya Parco:</strong> Center for art, culture, food, and manga</li>
+                        <li><strong>MIYASHITA PARK:</strong> Local food from all over Japan</li>
+                        <li><strong>Shibuya Yokocho:</strong> Gourmet specialties and karaoke bars</li>
+                    </ul>
+                </section>
+            </div>
+            
+            <!-- Anime Section -->
+            <section>
+                <h2>A New Center for Anime</h2>
+                <p>Based on Shibuya's reputation as a popular area for young people and aim to become more of an international city, the Tokyo Anime Center in DNP PLAZA SHIBUYA opened in April 2021, as a new center for anime culture.</p>
+                
+                <div class="highlight-box">
+                    <h3>Anime & Manga with Shibuya Settings:</h3>
+                    <ul>
+                        <li>"Idolmaster Cinderella Girls"</li>
+                        <li>"Jujutsu Kaisen" (Shibuya Incident arc)</li>
+                        <li>Anime and game floors on the 6th floor of Parco</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        
+        <!-- FOOTER with copyright and mailto -->
+        <footer>
+            <p>Contact for more travel tips: <a href="mailto:travel@example.com" class="external-link">travel@example.com</a></p>
+            <p>&copy; 2025 Tokyo Travel Guide. All rights reserved. | This page is created for educational purposes as part of a web development activity.</p>
+            <p>Original content sourced from Tokyo Official Travel Guide.</p>
+        </footer>
+    </div>
+</body>
+</html>
