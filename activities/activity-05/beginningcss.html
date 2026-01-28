@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeginningCSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Beginning CSS</h1>
+
+           <nav>
+            <a href="home.html">Home</a>
+            <a href="Css.html">CSS Styles</a>
+            <a href="selectors.html">Selectors</a>
+            <a href="resources.html">Resources</a>
+            </nav>
+
+        <main>
+            <section>
+                <h3>Questions</h3>
+                <ol>
+                    <li><strong>Explain the difference inline, embedded and external CSS.</strong></li>
+                </ol>
+                   <p><strong>Inline CSS </strong>is applied directly to an HTML element using the <mark>style</mark> attribute. This method is specific to individual elements.</p>
+                   <p><strong>For Example:</strong> 
+                    <code>&lt;p style="color: blue; font-size: 16px;"&gt;Good Morning&lt;/p&gt;</code></p>
+                   <p><strong>Embedded CSS</strong> is defined within a <mark><code><style></style></code></mark> tag inside the <mark>&lt;style&gt;</mark> section of an HTML document. This applies styles to the entire document</p>
+                   <p><strong>For Example:</strong>
+                    <code>&lt;style&gt;
+                        p { color: lightblue; }
+                    &lt;/style&gt;</code></p>
+                   <p><strong>External CSS</strong> is defined in a separate .css file and linked to the HTML document using the <mark>&lt;link&gt;</mark> tag in the <mark>&lt;head&gt;</mark> section. This method allows for consistent styling across multiple pages.</p>
+                   <p><strong>For Example:</strong>
+                    <code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></p>
+                <ol start="2">
+                    <li><strong>Explain why you should only use external CSS.</strong></li>
+                </ol>
+                   <p>External CSS is considered the best practice because it separates content from presentation, making it easier to maintain and update styles across multiple pages. It also improves performance by allowing browsers to cache the CSS file, reducing load times on subsequent visits.</p>
+                <ol start="3">
+                    <li><strong>What is a selector used for?</strong></li>
+                    <p>A selector is used in CSS to target HTML elements that you want to style. It defines which elements the CSS rules will apply to, allowing you to customize the appearance of specific parts of your web page.</p>
+    </header>
+    <copyright> &copy; 2026 Javan Goria </copyright> 
+    <a href="mailto:josh2300@go.byuh.edu"><em> For more information, Email Me Here!</em></a> 
+</body>
+</html>
