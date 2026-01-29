@@ -1,5 +1,5 @@
 header h1 {
-    color: #1c231c;
+    color: #9038d4;
     background-color: #7caadd;
     padding: 10px;
     text-align: center;
@@ -8,7 +8,7 @@ header h1 {
 
 nav {
     background-color: #c2cedb;
-    padding: 10px;
+    padding: 2px;
     margin-bottom: 20px;
     border-radius: 5px;
     text-align: center;
@@ -21,6 +21,13 @@ nav a {
     text-decoration: none;
     margin: 0 15px;
 }
+
+#FirstP {
+    color: #ba082f;
+    font-weight: bold;
+    font-size: 20px;
+}
+
 main {
     background-color: #9fb2cd;
     padding: 20px;
@@ -34,4 +41,15 @@ footer {
     color: #555;
     margin-top: 20px;
     font-weight: bold;
+}
+.darker {
+    background-color: #7a8ca3;
+    padding: 1px;
+    border-radius: 5px;
+    color: #bdcd0d;
+}
+
+.bolder {
+    font-weight: bold;
+    color: #062472;
 }
