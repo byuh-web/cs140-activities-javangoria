@@ -74,11 +74,15 @@
         color: #000000;
     }
 
-    .emphasized-choice {
+    span.special-text {
     color: #01436d;
     font-weight: bold; 
+    text-decoration: underline
     }
 
+    #top {
+        border-top: 5px solid #125b88;
+    }
     .deemphasized-choice {
     color: #100f0f;
     font-style: normal;
@@ -114,12 +118,12 @@
         text-transform: uppercase;
         font-size: 0.8rem;
         letter-spacing: 1px;
-        border: 2px solid #59049e;
+        border: 2px solid #000000;
         padding: 10px 20px;
         transition: all 0.3s ease;
     }
 
     .back-to-top:hover {
-        background-color: #310022;
+        background-color: #290aa5;
         color: #ffffff;
     }
