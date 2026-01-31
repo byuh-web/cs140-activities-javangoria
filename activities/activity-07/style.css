@@ -59,6 +59,7 @@
         font-size: 2rem;
         margin-bottom: 15px;
         margin-top: 10px;
+        text-emphasis-color: #00263e;
     }
 
     h3 {
@@ -71,10 +72,24 @@
     p {
         margin-bottom: 15px;
         font-size: 1.1rem;
-        color: #444;
+        color: #000000;
     }
 
+    .emphasized-choice {
+    color: #01436d;
+    font-weight: bold; 
+    }
+
+    .deemphasized-choice {
+    color: #100f0f;
+    font-style: normal;
+    }
     
+    strong {
+        color: #100f0f;
+        font-weight: bold;
+    }
+
     footer {
         background-color: #7085c589;
         padding: 60px 20px;
