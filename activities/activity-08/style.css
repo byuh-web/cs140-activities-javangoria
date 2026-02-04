@@ -39,7 +39,7 @@ nav a:hover {
 .hero {
     height: 90vh;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                url('Adventure.jpeg') no-repeat center center/cover; 
+                url('images/Adventure.jpeg') no-repeat center center/cover; 
     background-size: cover;
     background-position: center;
     background-attachment: fixed; 
