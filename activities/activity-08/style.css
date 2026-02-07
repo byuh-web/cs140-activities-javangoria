@@ -41,7 +41,7 @@ nav a:hover {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
                 url('images/Adventure.jpeg') no-repeat center center/cover; 
     background-size: cover;
-    background-position: right bottom, left top;
+    background-position: center center;
     background-repeat: no-repeat no-repeat;
     background-attachment: fixed, scroll; 
     display: flex;
