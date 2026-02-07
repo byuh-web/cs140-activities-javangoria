@@ -34,56 +34,57 @@ nav a:hover {
     color: #d4af37; 
 }
 
-/* 1. Page Background & Text */
+/* 1. Main Content Layout */
 main {
     padding: 40px 20px;
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
-    background-color: #f9f7f2; /* Soft parchment color */
 }
 
 main h1 {
     font-size: 3rem;
-    color: #bc002d; /* Japan Sun Red */
+    color: #1a5e63; /* Tropical Teal for Thailand */
     margin-bottom: 10px;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
 }
 
 main p {
-    font-size: 1.2rem;
-    color: #444;
+   font-size: 1.2rem;
+    color: #333;
     max-width: 800px;
     margin: 0 auto 40px auto;
-    line-height: 1.6;
 }
 
-
-.japan {
+/* 2. The Thailand Gallery Grid */
+.thailand {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* This creates a 3-column layout that becomes 1-column on mobile */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 20px;
     padding: 20px;
 }
 
-.japan img {
+/* 3. The Image "Consistency" Rule */
+.thailand img {
     width: 100%;
-    height: 300px; 
-    border: 10px solid white; 
-    border-radius: 4px;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
-    transition: all 0.4s ease-in-out;
-    filter: grayscale(20%); 
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    object-fit: cover;
+    border: 8px solid #ffffff;
+    border-radius: 12px; /* Smoother corners for a modern look */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-.japan img:hover {
-    transform: scale(1.05) rotate(1deg); 
-    filter: grayscale(0%); 
-    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+/* 4. Hover Effect (Matches Japan style) */
+.thailand img:hover {
+    transform: translateY(-10px); /* Lifts the photo up */
+    box-shadow: 0 15px 30px rgba(0, 56, 168, 0.2); /* Soft blue shadow */
+    border-color: #f1c40f; /* Sun Yellow accent on hover */
     cursor: pointer;
-    border-color: #bd3f11;
 }
 
 footer {
