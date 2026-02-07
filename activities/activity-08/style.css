@@ -52,6 +52,17 @@ nav a:hover {
     text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
 }
 
+.destinations-container {
+    text-align: center;
+    padding: 20px;
+}
+
+/* 2. Style the H3 */
+.destinations-container h3 {
+    font-size: 2rem;
+    color: #1a5e63;
+    margin-bottom: 20px;
+}
 /* 1. The List (Meeting the "custom" requirement without images) */
 /* Note: If your assignment REQUIRES an image for the bullet, 
    you must use list-style-image. Otherwise, this is the cleanest "no-image" version. */
