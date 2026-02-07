@@ -41,8 +41,9 @@ nav a:hover {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
                 url('images/Adventure.jpeg') no-repeat center center/cover; 
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed; 
+    background-position: right bottom, left top;
+    background-repeat: no-repeat no-repeat;
+    background-attachment: fixed, scroll; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -51,6 +52,37 @@ nav a:hover {
     text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
 }
 
+.custom-list {
+    list-style-type: disc;
+    padding: 40px;
+    line-height: 2;
+    font-weight: bold;
+}
+
+.Tour {
+    background-color: #c0cfd7;
+}
+.Tour h1 {
+    font-size: 3rem;
+    color: #1a5e63; 
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.Tour h3 {
+    font-size: 2rem;
+    color: #1a5e63; 
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.Tour p {
+    font-size: 1.0rem;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+
+}
 .hero h1 {
     font-size: 4rem;
     margin: 0;
