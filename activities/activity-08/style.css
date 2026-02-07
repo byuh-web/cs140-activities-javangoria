@@ -58,7 +58,7 @@ nav a:hover {
 }
 
 
-.destinations-container h3 {
+.destinations-container h2 {
     font-size: 2rem;
     color: #1a5e63;
     margin-bottom: 20px;
@@ -103,7 +103,7 @@ nav a:hover {
     text-align: center;
 }
 
-.Tour h3 {
+.Tour h2 {
     font-size: 1.8rem;
     color: #1a5e63; 
     margin-bottom: 25px;
