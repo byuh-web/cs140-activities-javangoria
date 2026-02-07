@@ -57,22 +57,20 @@ nav a:hover {
     padding: 20px;
 }
 
-/* 2. Style the H3 */
+
 .destinations-container h3 {
     font-size: 2rem;
     color: #1a5e63;
     margin-bottom: 20px;
 }
-/* 1. The List (Meeting the "custom" requirement without images) */
-/* Note: If your assignment REQUIRES an image for the bullet, 
-   you must use list-style-image. Otherwise, this is the cleanest "no-image" version. */
+
 .custom-list {
-    list-style-type: square; /* A custom look compared to default dots */
+    list-style-type: square; 
     padding: 20px 40px;
     line-height: 2;
     font-weight: bold;
-    display: inline-block; /* Helps with centering the list block */
-    text-align: left;      /* Keeps the text aligned with the bullets */
+    display: inline-block; 
+    text-align: left;      
 }
 
 .custom-list li {
@@ -80,16 +78,16 @@ nav a:hover {
     font-size: 1.2rem;
     text-align: center;
 }
-/* Container to center the list on the page */
+
 .list-wrapper {
     text-align: center;
     margin-bottom: 40px;
 }
 
-/* 2. The Tour Section Styling */
+
 .Tour {
-    background-color: #c0cfd7; /* Solid background color */
-    padding: 80px 20px;        /* Large padding creates the "Hero" feel without an image */
+    background-color: #c0cfd7; 
+    padding: 80px 20px;       
     border-top: 5px solid #1a5e63;
     border-bottom: 5px solid #1a5e63;
 }
