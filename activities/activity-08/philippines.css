@@ -34,7 +34,7 @@ nav a:hover {
     color: #d4af37; 
 }
 
-/* 1. Philippines Page Content */
+
 main {
     padding: 40px 20px;
     max-width: 1200px;
@@ -44,7 +44,7 @@ main {
 
 main h1 {
     font-size: 3rem;
-    color: #0038a8; /* Philippines Flag Blue */
+    color: #0038a8; 
     margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -57,31 +57,31 @@ main p {
     margin: 0 auto 40px auto;
 }
 
-/* 2. The Philippines Gallery Grid */
+
 .philippines {
     display: grid;
-    /* This creates a clean 3-column look that drops to 1 column on phones */
+    
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 25px;
     padding: 20px;
 }
 
-/* 3. Tropical Photo Style */
+
 .philippines img {
     width: 100%;
-    height: 350px; /* Slightly taller for those beach shots */
+    height: 350px; 
     object-fit: cover;
     border: 8px solid #ffffff;
-    border-radius: 12px; /* Smoother corners for a modern look */
+    border-radius: 12px; 
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* 4. Interaction (Hover Effect) */
+
 .philippines img:hover {
-    transform: translateY(-10px); /* Lifts the photo up */
-    box-shadow: 0 15px 30px rgba(0, 56, 168, 0.2); /* Soft blue shadow */
-    border-color: #f1c40f; /* Sun Yellow accent on hover */
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 56, 168, 0.2); 
+    border-color: #f1c40f; 
     cursor: pointer;
 }
 footer {
