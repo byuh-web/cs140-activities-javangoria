@@ -52,40 +52,56 @@ nav a:hover {
     text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
 }
 
+/* 1. The List (Meeting the "custom" requirement without images) */
+/* Note: If your assignment REQUIRES an image for the bullet, 
+   you must use list-style-image. Otherwise, this is the cleanest "no-image" version. */
 .custom-list {
-    list-style-type: disc;
-    padding: 40px;
+    list-style-type: square; /* A custom look compared to default dots */
+    padding: 20px 40px;
     line-height: 2;
     font-weight: bold;
+    display: inline-block; /* Helps with centering the list block */
+    text-align: left;      /* Keeps the text aligned with the bullets */
+}
+
+/* Container to center the list on the page */
+.list-wrapper {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* 2. The Tour Section Styling */
+.Tour {
+    background-color: #c0cfd7; /* Solid background color */
+    padding: 80px 20px;        /* Large padding creates the "Hero" feel without an image */
+    border-top: 5px solid #1a5e63;
+    border-bottom: 5px solid #1a5e63;
+}
+
+.Tour h1 {
+    font-size: 3.2rem;
+    color: #1a5e63; 
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
     text-align: center;
 }
 
-.Tour {
-    background-color: #c0cfd7;
-}
-.Tour h1 {
-    font-size: 3rem;
-    color: #1a5e63; 
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-align: center;
-}
 .Tour h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #1a5e63; 
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     text-transform: uppercase;
-    letter-spacing: 2px;
     text-align: center;
 }
+
 .Tour p {
-    font-size: 1.3rem;
-    color: #010101;
-    max-width: 800px;
-    margin: 0 auto 40px auto;
-    font-weight: 300;
-    line-height: 1.6;
+    font-size: 1.25rem;
+    color: #333333;
+    max-width: 850px;
+    margin: 0 auto 30px auto;
+    font-weight: 400;
+    line-height: 1.8;
     text-align: center;
 }
 .hero h1 {
