@@ -1,0 +1,9 @@
+.example-div {
+    background-color: lightblue;
+    border: 20px solid black;
+    box-sizing: border-box;
+    margin: 40px;
+    padding: 50px;
+    width: 100%;
+    text-align: center;
+}
