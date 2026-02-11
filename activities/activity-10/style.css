@@ -37,10 +37,10 @@ nav :hover {
 
 .box-two {
     text-align: center;
-    width: 57%;
+    width: 50%;
     height: 50%;
     margin: 2em auto;
-    border: 5px dashed black;
-    padding: 20px 40px;
+    border: 2px dashed black;
+    padding: 10px 20px;
     background-color: #ffccbc;
 }
