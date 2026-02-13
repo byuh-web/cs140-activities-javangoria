@@ -1,0 +1,74 @@
+
+ * Sample CSS for Activity{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #655656;
+    line-height: 1.6;;
+}
+
+#page-header {
+    background-image: url("images/patterns.png"); 
+    background-size: auto;
+    background-repeat:repeat;
+    color: white;
+    padding: 1rem 0;
+}
+
+.title {
+    font-size: 2rem;
+    letter-spacing: 0.05em;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.nav-list > li {
+    padding: 0.25rem 0.75rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #1d1a1a;
+    font-size: 1rem;
+}
+
+.nav-list a:hover {
+    color: #333333;
+    background-color: #5f94c5;
+    scroll-behavior:smooth;
+}
+
+main {
+    padding: 2rem;
+}
+
+.resources {
+    background-color: #eecaca;
+    padding: 2rem;
+    border-radius: 6px;
+    width: 60%;
+    list-style-position: inside;  
+}
+
+.resources li {
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    background-color: #c96f45;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    margin-top: 2rem;
+}
