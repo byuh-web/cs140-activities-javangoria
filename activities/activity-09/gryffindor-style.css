@@ -1,0 +1,195 @@
+/* gryffindor-style.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(145deg, #2b1a0f 0%, #3f2c1c 100%);
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+/* main card – like aged parchment */
+.parchment-card {
+  max-width: 1100px;
+  width: 100%;
+  background: #faf0e1;
+  background-image: 
+    radial-gradient(circle at 30% 40%, rgba(215, 180, 130, 0.15) 0%, transparent 25%),
+    linear-gradient(165deg, #e6d5b8 0%, #fcf3e0 80%);
+  box-shadow: 0 30px 40px -15px rgba(0, 0, 0, 0.6), 
+              0 0 0 2px #b47c48 inset, 
+              0 0 0 5px #7a2e1a inset;
+  border-radius: 34px 34px 30px 30px;
+  padding: 2.2rem 2.2rem 1.8rem 2.2rem;
+  transition: all 0.2s;
+}
+
+/* top stripe – scarlet and gold */
+.house-stripe {
+  background: linear-gradient(135deg, #740001 0%, #ae0001 40%, #eeba30 70%, #d3a625 100%);
+  height: 18px;
+  width: 100%;
+  border-radius: 40px 40px 0 0;
+  margin-bottom: 1.8rem;
+  box-shadow: 0 2px 8px #3f1e0b;
+}
+
+/* main title */
+h1 {
+  font-size: 2.7rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #2f1509;
+  text-shadow: 2px 2px 0 #cfa668, 4px 4px 0 rgba(172, 82, 28, 0.3);
+  font-family: 'Cinzel', 'Georgia', serif;
+  text-align: center;
+  margin-top: -0.2rem;
+  margin-bottom: 1.8rem;
+  word-break: break-word;
+  border-bottom: 3px double #b87c3a;
+  padding-bottom: 0.8rem;
+}
+
+/* five character cards */
+.portrait-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem 1.2rem;
+  margin: 2rem 0 2.2rem;
+}
+
+.portrait-item {
+  background: #dbbd9a;
+  background: linear-gradient(145deg, #eedbc5, #d6b68b);
+  border: 3px solid #7a3e1f;
+  border-radius: 50px 50px 30px 30px;
+  padding: 0.8rem 1.2rem;
+  min-width: 150px;
+  text-align: center;
+  box-shadow: 0 10px 0 #4a2816, 0 8px 12px #231107;
+  font-family: 'Cinzel', 'Georgia', serif;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #1f0f07;
+  transition: transform 0.15s;
+}
+
+.portrait-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 0 #4a2816, 0 12px 18px #1e0d05;
+}
+
+/* main textual content */
+.content-section {
+  margin-top: 1.5rem;
+}
+
+.section-heading {
+  font-size: 2rem;
+  font-family: 'Cinzel', 'Georgia', serif;
+  color: #321d0d;
+  border-left: 10px solid #ae0001;
+  padding-left: 1.2rem;
+  margin: 1.8rem 0 1.2rem 0;
+  text-shadow: 1px 1px 0 #c98f42;
+  letter-spacing: 1px;
+}
+
+.description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  color: #2e1b0e;
+  text-align: justify;
+  font-weight: 400;
+  background: rgba(255, 240, 215, 0.7);
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px 8px 30px 8px;
+  box-shadow: inset 0 1px 5px #bb9f7e, 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.second {
+  margin-bottom: 2rem;
+}
+
+/* interactive line "click the links above …" */
+.click-links {
+  text-align: center;
+  font-size: 1.25rem;
+  font-style: italic;
+  background: #d4a373;
+  color: #241006;
+  padding: 0.8rem 1rem;
+  border-radius: 50px;
+  margin: 2.2rem 0 2.5rem;
+  border: 2px solid #9e5e2c;
+  box-shadow: 0 6px 0 #61381d;
+  font-weight: 500;
+  font-family: 'Georgia', serif;
+}
+
+/* Gryffindor common room placeholder – exactly like original line */
+.common-room {
+  background: #bc8f5a;
+  background: linear-gradient(145deg, #b8864b, #a57144);
+  padding: 1.8rem 1rem;
+  text-align: center;
+  border-radius: 60px 60px 20px 20px;
+  border: 3px solid #4a2c15;
+  box-shadow: inset 0 0 20px #f3d9a4, 0 12px 0 #4d2e17;
+  margin: 2.5rem 0 1.8rem;
+}
+
+.common-room-label {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Cinzel', serif;
+  background: #f9eec1;
+  padding: 0.4rem 2.5rem;
+  border-radius: 3rem;
+  color: #2b1407;
+  border: 3px solid #c99946;
+  box-shadow: 0 4px 0 #8f5727;
+  letter-spacing: 2px;
+  display: inline-block;
+}
+
+/* footer */
+.footer-copyright {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #673c1f;
+  border-top: 2px dashed #b17d53;
+  padding-top: 1.5rem;
+  margin-top: 1rem;
+  font-family: 'Georgia', serif;
+  letter-spacing: 1px;
+}
+
+/* small screens fine-tuning */
+@media (max-width: 680px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .portrait-item {
+    min-width: 130px;
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+  }
+  .section-heading {
+    font-size: 1.6rem;
+  }
+  .common-room-label {
+    font-size: 1.5rem;
+    padding: 0.2rem 1rem;
+  }
+}
