@@ -44,6 +44,7 @@ aside {
     background: #eaf2e8;        
     padding: 2rem 1.2rem;
     border-right: 1px solid #b9cfb1;
+    float: left;
 }
 
 main {
@@ -92,18 +93,18 @@ footer {
 }
 
 
-aside h3 {
+aside h2 {
     font-size: 1.6rem;
-    border-bottom: 3px solid #d4a13e;
+    border-bottom: 3px solid #c39437;
     padding-bottom: 0.5rem;
-    margin-bottom: 1.2rem;
-    color: #1f4f2b;
+    margin-bottom: 1rem;
+    color: #000000;
 }
 
 aside p {
     margin-bottom: 1.2rem;
     font-size: 1rem;
-    color: #1d3b1d;
+    color: #000000;
 }
 
 .aside-extra {
@@ -131,14 +132,6 @@ main h2 {
     font-weight: 600;
 }
 
-.image-placeholder-note {
-    font-size: 0.8rem;
-    background: #f0e5d5;
-    padding: 0.15rem 0.5rem;
-    border-radius: 20px;
-    color: #7b5e3c;
-}
-
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -157,7 +150,7 @@ main h2 {
 
 .profile-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 15px 25px rgba(0,60,0,0.15);
+    box-shadow: 0 15px 25px rgba(0, 38, 0, 0.15);
 }
 
 .card-img {
@@ -298,7 +291,7 @@ header h1 {
 
 header p {
     font-style: italic;
-    color: #f5e3b6;
+    color: #eddaab;
 }
 
 a[href="#"] {
