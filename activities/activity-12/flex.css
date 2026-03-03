@@ -1,24 +1,25 @@
 * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
 }
 
 body {
-            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-            line-height: 1.6;
-            background-color: #f0f3f0;
-            color: #1e293b;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f3f0;
+    color: #1e293b;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
+
 header {
-        background-color: #2c3e50;
-        color: white;
-        padding: 1rem 2rem;
-        text-align: center;
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
 }
 
 .order-button {
