@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    tr:nth-child(even) {
+        background-color: #e2b8b8;
+    }
+    tr {
+        font-size: 18px;
+    }
+    .fail {
+        color: red;
+    }
+    footer {
+        margin-top: 50px;
+        text-align: center;
+        font-size: 14px;
+        color: #000000;
+    }
+</style>
+<body>
+
+<h1> Student Grades </h1>
+<table>
+  <thead>
+    <tr>
+        <th> Student Name </th>
+        <th> Score </th>
+        <th> Grade </th>
+    </tr>
+  </thead>
+  <tr>
+    <td><em> John Doe </em></td>
+    <td>85</td>
+    <td>B+</td>
+  </tr>
+  <tr>
+    <td><em> Brenda Lee </em></td>
+    <td>30</td>
+    <td>C</td>
+  </tr>
+  <tr>
+    <td><em> Jane Smith </em></td>
+    <td>92</td>
+    <td>A-</td>
+  </tr>
+  <tr>
+    <td><em> Emily Davis </em></td>
+    <td>78</td>
+   <td>C+</td>
+  </tr>                   
+  <tr>
+    <td><em> Michael Brown </em></td>
+    <td>88</td>
+    <td class="fail">F</td>
+  </tr>
+</table>
+<p> Total Students: 5 </p>
+<footer>
+    <p> &copy; 2026 Student Grades. All rights reserved. Javan-Goria </p>
+</footer>
+</body>
+</html>
