@@ -3,10 +3,10 @@
 <style>
     table {
         width: 100%;
-        border-collapse: collapse;
+        border-width: solid;
     }
     th, td {
-        border: 1px solid black;
+        border: 2px solid black;
         padding: 8px;
         text-align: left;
     }
@@ -31,7 +31,7 @@
 </style>
 <body>
 
-<h1> Student Grades </h1>
+<h1>Student Grades</h1>
 <table>
   <thead>
     <tr>
@@ -42,12 +42,12 @@
   </thead>
   <tr>
     <td><em> John Doe </em></td>
-    <td>85</td>
+    <td>86</td>
     <td>B+</td>
   </tr>
   <tr>
     <td><em> Brenda Lee </em></td>
-    <td>30</td>
+    <td>75</td>
     <td>C</td>
   </tr>
   <tr>
@@ -62,11 +62,26 @@
   </tr>                   
   <tr>
     <td><em> Michael Brown </em></td>
-    <td>88</td>
+    <td>69</td>
     <td class="fail">F</td>
   </tr>
+  <tr>
+    <td><em> Sarah Wilson </em></td>
+    <td>95</td>
+    <td>A</td>
 </table>
-<p> Total Students: 5 </p>
+<div>
+    <p>GPA Scale</p>
+    <ul>
+        <li>A: 90-100</li>
+        <li>B+: 85-89</li>
+        <li>B: 80-84</li>
+        <li>C+: 75-79</li>
+        <li>D: 70-74</li>
+        <li>F: Below 70</li>
+    </ul>
+    <p> Total Students: 6 </p>
+</div>
 <footer>
     <p> &copy; 2026 Student Grades. All rights reserved. Javan-Goria </p>
 </footer>
