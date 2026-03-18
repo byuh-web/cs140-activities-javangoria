@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Form Activity</title>
+</head>
+<body>
+  <h2>Contact Form</h2>
+
+  <form method="POST" action="processing form">
+    <label for="Name">Name:</label><br>
+    <input type="text" id="Name" name="Name"><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email"><br><br>
+
+    <label for="age">Age:</label><br>
+    <input type="number" id="age" name="age"><br><br>
+
+    <label for="address"></label>Address:</label><br>
+    <input type="text" id="address" name="address"><br><br>
+
+    <label for="phone">Phone Number:</label><br>
+    <input type="tel" id="phone" name="phone"><br><br>
+
+
+    <label for="country">Country:</label><br>
+    <select id="country" name="country">
+      <option value="usa">United States</option>
+      <option value="canada">Canada</option>
+      <option value="Tuvalu">Tuvalu</option>
+      <option value="australia">Australia</option>
+      <option value="philippines">Philippines</option>
+      <option value="japan">Japan</option>
+      <option value="papua new guinea">Papua New Guinea </option>
+      <option value="Tonga">Tonga</option>
+      <option value="Indonesia">Indonesia</option>
+      <option value=""Other">Other</option>
+    </select><br><br>
+
+    <label for="Other country">Other Country:</label><br>
+    <input type="text" id="Other country" name="Other country"><br><br>
+
+    <p>Gender:</p>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label><br>
+
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br><br>
+
+    <p>Skills:</p>
+    <input type="checkbox" id="html" name="skills" value="HTML">
+    <label for="html">HTML</label><br>
+
+    <input type="checkbox" id="css" name="skills" value="CSS">
+    <label for="css">CSS</label><br>
+
+    <input type="checkbox" id="js" name="skills" value="JavaScript">
+    <label for="js">JavaScript</label><br><br>
+
+    <label for="message">Notes:</label><br>
+    <textarea id="message" name="message" rows="4" cols="30"></textarea><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
