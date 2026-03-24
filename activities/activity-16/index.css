@@ -45,11 +45,6 @@ input, textarea, select {
     font-weight: normal;
 }
 
-.input-column {
-    display: flex;
-    flex-direction: column;
-}
-
 .forgot-link {
     margin-top: 5px;
     font-size: 12px;
