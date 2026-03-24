@@ -9,7 +9,7 @@
 <body>
 
 <header>
-    <h1>User Registration</h1>
+    <h1>User Registration Form</h1>
 </header>
 
 <main>
@@ -26,19 +26,29 @@
                 <label for="pass">Password:</label>
 
                 <div class="input-column">
-                     <input type="password" id="pass" name="pass" required>
-                     <a href="#" class="forgot-link">Forgot password?</a>
+                    <input type="password" id="pass" name="pass" required>
+                    <a href="#" class="forgot-link">Forgot Password?</a>
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
             </div>
 
             <div class="form-group">
                 <label for="age">Age:</label>
-                <input type="number" id="age" name="age">
+                <input type="number" id="age" name="age" min="0" max="120" required>
             </div>
         </fieldset>
 
@@ -46,43 +56,41 @@
             <legend>Preferences</legend>
 
             <div class="form-group">
-                <label for="nationality">Nationality (specific):</label>
-                <input type="text" id="nationality" name="nationality">
+                <label for="nationality">Nationality:</label>
+                <input type="text" id="nationality" name="nationality" required>
             </div>
 
             <div class="form-group">
                 <label for="city">Select City:</label>
-                <select id="city" name="city">
-                    <option value="laie">Laie</option>
+                <select id="city" name="city" required>
+                    <option value="Hale">BYUH HALE</option>
+                    <option value="tva">BYUH TVA</option>
+                    <option value="Hauula">Hauula</option>
+                    <option value="Kaneohe">Kaneohe</option>
                     <option value="Kahuku">Kahuku</option>
                     <option value="Moana St.">Moana St.</option>
-                    <option value="Hale">BYUH Hale</option>
-                    <option value="Hauula">Hauula</option>
-                    <option value="TVA">BYUH TVA</option>
                     <option value="other">Other</option>
                 </select>
             </div>
-
-            <div class="form-group">
-                <label for="specific">If others, please specify:</label>
-                <input type="text" id="specific" name="specific">
-            </div>
+                <div class="form-group">
+                    <label for="specify">if others please specify:</label>
+                    <input type="text" id="specify" name="specify">
+                </div>
 
             <div class="form-group inline-group">
                 <label>Gender:</label>
-                <input type="radio" id="m" name="gen" value="m" required> 
-                <label for="m">Male</label>
-                <input type="radio" id="f" name="gen" value="f" required> 
-                <label for="f">Female</label>
+                <input type="radio" id="m" name="gen" value="m" required> <label for="m">Male</label>
+                <input type="radio" id="f" name="gen" value="f" required> <label for="f">Female</label>
             </div>
-            
-            <div class="form-group">
-                <label for="suggestion">Comment suggestions:</label>
-                <textarea id="suggestion" name="suggestion" rows="4"></textarea>
-            </div>
+
+            <div class="form-group"> 
+                    <label for="any suggestions">Any suggestions:</label>
+                    <textarea id="suggestions" name="suggestions" rows="4" cols="50"></textarea>
+                </div>
+
             <div class="form-group inline-group">
-                <input type="checkbox" id="terms" name="terms" required>
-                <label for="terms">I agree to the Terms and Conditions</label>
+                <input type="checkbox" id="terms" name="terms" required> 
+                <label for="terms">I agree to the terms and conditions</label>
             </div>
         </fieldset>
 
@@ -91,7 +99,7 @@
 </main>
 
 <footer>
-    <p>2026 Styled Form | Javan-Goria</p>
+    <p> 2026 Styled Form | Javan-Goria</p>
 </footer>
 
 </body>
