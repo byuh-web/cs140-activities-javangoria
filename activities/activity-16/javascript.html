@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <header>
+        <h1>Web Design</h1>
+    </header>
+    <main>
+        <form action="processing.html" method="post" id="myForm">
+            First Name: <input type="text" id="firstName" name="first" placeholder="First Name"><br>
+            Last Name: <input type="text" id="lastName" name="last" placeholder="Last Name"><br>
+            Password: <input type="password" name="pass" id="password"><br>
+            <input type="checkbox" name="remember" checked id="remember"> Remember Me<br>
+            Age: <input type="number" name="age" id="age"><br>
+            Class:
+            <input type="radio" value="freshman" name="class">Freshman<br>
+            <input type="radio" value="sophomore" name="class">Sophomore<br>
+            <input type="radio" value="junior" name="class">Junior<br>
+            <input type="radio" value="senior" name="class">Senior<br>
+            State: <select name="state" id="state">
+                <option value="blank" disabled selected>Make Selection</option>
+                <option value="hi">Hawaii</option>
+                <option value="ca">California</option>
+                <option value="co">Colorado</option>
+                <option value="ut">Utah</option>
+            </select><br>
+            <input type="submit">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Chris Slade</p>
+    </footer>
+
+    <script>
+        // -------------------------------------------------------
+        // EVENT LISTENER
+        // getElementById() finds the form on the page using its id="myForm"
+        // addEventListener() watches for a specific event - in this case "submit"
+        // When the user clicks the submit button, the function below runs automatically
+        // "event" is a built-in object that holds info about what just happened
+        // -------------------------------------------------------
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+
+            // -------------------------------------------------------
+            // PREVENT DEFAULT BEHAVIOR
+            // Normally submitting a form reloads or redirects the page (the "default" behavior)
+            // preventDefault() stops that from happening so our JavaScript can take over
+            // This MUST be the first line or the page will reload before anything else runs
+            // -------------------------------------------------------
+            event.preventDefault();
+
+            // -------------------------------------------------------
+            // COLLECTING FORM VALUES
+            // getElementById() finds each input field by its id attribute
+            // .value grabs whatever the user typed or selected in that field
+            // We store each value in a "const" variable so we can use it later
+            // const means the variable cannot be reassigned after it is set
+            // -------------------------------------------------------
+            const first = document.getElementById("firstName").value;
+            const last = document.getElementById("lastName").value;
+            const age = document.getElementById("age").value;
+            const password = document.getElementById("password").value;
+
+            // -------------------------------------------------------
+            // VALIDATION CHECK 1 - Empty name fields
+            // The ! symbol means "not" - so !first means "if first is empty"
+            // The || symbol means "or" - so this reads:
+            //   "if first is empty OR last is empty"
+            // If either field is empty, alert() shows a popup message to the user
+            // return stops the function immediately so nothing else runs
+            // The form will not process until the user fixes the error
+            // -------------------------------------------------------
+            if (!first || !last) {
+                alert("Please provide your full name.");
+                return;
+            }
+
+            // -------------------------------------------------------
+            // VALIDATION CHECK 2 - Empty password field
+            // Same idea as above but just checking one field
+            // If password is empty, stop and tell the user
+            // -------------------------------------------------------
+            if (!password) {
+                alert("Please enter a password.");
+                return;
+            }
+
+            // -------------------------------------------------------
+            // VALIDATION CHECK 3 - Age range
+            // This checks TWO things at once using ||
+            //   1. !age  - the field is empty
+            //   2. age < 18 - the number entered is less than 18
+            // If either is true, the user sees an alert and the function stops
+            // -------------------------------------------------------
+            if (!age || age < 18) {
+                alert("You must be 18 years or older to submit this form.");
+                return;
+            }
+
+            // -------------------------------------------------------
+            // BUILDING THE DATA OBJECT
+            // An object is a container that holds related pieces of data together
+            // It uses { } curly braces with key: value pairs separated by commas
+            // Example: firstName: first  means the key is "firstName" and
+            //          the value is whatever is stored in the "first" variable
+            // This bundles all the form data into one neat package
+            // -------------------------------------------------------
+            const data = {
+                firstName: first,
+                lastName: last,
+                age: age
+            }
+
+            // -------------------------------------------------------
+            // AJAX - CREATING THE REQUEST
+            // AJAX lets us communicate with a server WITHOUT reloading the page
+            // XMLHttpRequest() is the built-in JavaScript tool that makes this possible
+            // We store it in a variable called "xhr" so we can configure and use it
+            // -------------------------------------------------------
+            const xhr = new XMLHttpRequest();
+
+            // -------------------------------------------------------
+            // AJAX - OPENING THE REQUEST
+            // xhr.open() sets up the request but does NOT send it yet
+            // "GET" is the request method - we use GET because POST doesn't
+            //        work on GitHub Pages
+            // "submit.json" is the file we are requesting - this is our
+            //        fake server response file
+            // true means the request is asynchronous - meaning the rest of
+            //        the page keeps working while it waits for a response
+            // -------------------------------------------------------
+            xhr.open("GET", "submit.json", true);
+
+            // -------------------------------------------------------
+            // AJAX - HANDLING THE RESPONSE
+            // onreadystatechange is a function that fires every time the
+            //        request status changes (there are 5 stages: 0 through 4)
+            // readyState === 4 means the request is fully complete
+            // status === 200 means the server said "OK - everything worked"
+            //        (You may recognize 200 as the opposite of a 404 "not found" error)
+            // If both are true, the request succeeded and we show a success message
+            // If readyState is 4 but status is NOT 200, something went wrong
+            // -------------------------------------------------------
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    alert('Form submitted successfully.');
+                } else if (xhr.readyState === 4) {
+                    alert('Error submitting form.');
+                }
+            };
+
+            // -------------------------------------------------------
+            // AJAX - SENDING THE REQUEST
+            // xhr.send() actually fires off the request to the server
+            // JSON.stringify() converts our data object into a JSON string
+            //        because that is the format servers expect to receive data in
+            // Example: { firstName: "John" } becomes '{"firstName":"John"}'
+            // -------------------------------------------------------
+            xhr.send(JSON.stringify(data));
+
+            // -------------------------------------------------------
+            // CONSOLE LOG
+            // console.log() prints the data object to the browser console
+            // This is useful for debugging - you can open Developer Tools
+            //        (press F12) and click the Console tab to see it
+            // It does not show anything to the user on the page
+            // -------------------------------------------------------
+            console.log(data);
+        });
+    </script>
+</body>
+</html>
