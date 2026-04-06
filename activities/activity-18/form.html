@@ -1,0 +1,153 @@
+<!-- form.html - Content Page 4: Form + JavaScript Confirmation (Simulated Server) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Vote for your favorite anime and help us rank the best series.">
+  <title>ANIME FILM by JVNGORS :D | Vote</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1> ANIME FILM by JVNGORS :D</h1>
+      <p>your escape into animation</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="finalproject.html" class="active">Home</a></li>
+        <li><a href="top-rated.html">Top Rated</a></li>
+        <li><a href="genres.html">Genres</a></li>
+        <li><a href="table.html">Ratings Table</a></li>
+        <li><a href="form.html" class="active">Vote</a></li>
+        <li><a href="recommended.html">Recommend</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <h2>🗳️ Vote for the Best Anime</h2>
+      <p>Tell us which anime deserves the top spot. Your vote matters!</p>
+    </section>
+
+    <div class="form-container">
+      <form id="animeVoteForm">
+        <div class="form-group">
+          <label for="name">Your Name: *</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address: *</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="animeChoice">Which anime is the BEST? *</label>
+          <select id="animeChoice" name="animeChoice" required>
+            <option value="">-- Select an anime --</option>
+            <option value="Fullmetal Alchemist Brotherhood">Fullmetal Alchemist Brotherhood</option>
+            <option value="Attack on Titan">Attack on Titan</option>
+            <option value="Steins;Gate">Steins;Gate</option>
+            <option value="Demon Slayer">Demon Slayer</option>
+            <option value="Spirited Away">Spirited Away</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="reason">Why do you love this anime? *</label>
+          <textarea id="reason" name="reason" rows="4" placeholder="Share your thoughts..." required></textarea>
+        </div>
+        <div class="form-group">
+          <label>How many times have you rewatched? *</label>
+          <div class="radio-group">
+            <label><input type="radio" name="rewatch" value="0-1 times" required> 0-1 times</label>
+            <label><input type="radio" name="rewatch" value="2-5 times"> 2-5 times</label>
+            <label><input type="radio" name="rewatch" value="5+ times"> 5+ times</label>
+          </div>
+        </div>
+        <button type="submit">Submit Your Vote</button>
+      </form>
+    </div>
+
+    <!-- Confirmation modal / inline result (simulated server-side processing) -->
+    <div id="confirmationModal" class="modal" style="display:none;">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3>✅ Vote Submitted Successfully!</h3>
+        <div id="submissionData"></div>
+        <p><em>Thank you for participating! Your vote helps us rank the best anime.</em></p>
+        <button id="closeModalBtn">Close</button>
+      </div>
+    </div>
+
+    <section class="references">
+      <h3>📚 Form References</h3>
+      <ul>
+        <li><a href="https://myanimelist.net/forum/?topicid=123456" target="_blank">MyAnimeList Voting Trends</a></li>
+        <li><a href="https://www.anime-planet.com/users/votes" target="_blank">Anime-Planet User Rankings</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Anime Haven - Voting form with simulated server confirmation.</p>
+  </footer>
+
+  <script>
+    // JavaScript form handling + confirmation page simulation (client-side)
+    document.getElementById('animeVoteForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Gather form data
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const animeChoice = document.getElementById('animeChoice').value;
+      const reason = document.getElementById('reason').value;
+      const rewatch = document.querySelector('input[name="rewatch"]:checked');
+      
+      if (!name || !email || !animeChoice || !reason || !rewatch) {
+        alert('Please fill out all required fields (*)');
+        return;
+      }
+      
+      // Simulate server-side processing (display confirmation)
+      const submissionHTML = `
+        <p><strong>Name:</strong> ${escapeHtml(name)}</p>
+        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+        <p><strong>Best Anime:</strong> ${escapeHtml(animeChoice)}</p>
+        <p><strong>Reason:</strong> ${escapeHtml(reason)}</p>
+        <p><strong>Rewatch count:</strong> ${rewatch.value}</p>
+      `;
+      
+      document.getElementById('submissionData').innerHTML = submissionHTML;
+      document.getElementById('confirmationModal').style.display = 'flex';
+      
+      // Optionally reset form (or keep data)
+      this.reset();
+    });
+    
+    function escapeHtml(str) {
+      return str.replace(/[&<>]/g, function(m) {
+        if (m === '&') return '&amp;';
+        if (m === '<') return '&lt;';
+        if (m === '>') return '&gt;';
+        return m;
+      });
+    }
+    
+    // Modal close functionality
+    const modal = document.getElementById('confirmationModal');
+    const closeBtn = document.querySelector('.close-btn');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    
+    function closeModal() {
+      modal.style.display = 'none';
+    }
+    closeBtn.onclick = closeModal;
+    closeModalBtn.onclick = closeModal;
+    window.onclick = function(event) {
+      if (event.target == modal) closeModal();
+    }
+  </script>
+</body>
+</html>
