@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you for submitting your anime review">
+    <title>Thank You | Ultimate Anime Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>🎬 Ultimate Anime Series Guide</h1>
+            <p>Your complete guide to the greatest anime series of all time</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul class="nav-menu">
+            <li><a href="mainpage.html" class="active">Home</a></li>
+            <li><a href="anime.html">Anime List</a></li>
+            <li><a href="videos.html">Trailers & Videos</a></li>
+            <li><a href="contact.html">Contact & Reviews</a></li>
+            <li><a href="comparison.html">Comparison</a></li>
+            <li><a href="form.html">Forms</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="confirmation-box">
+            <h2>✅ Thank You for Your Review!</h2>
+            <p>Your feedback helps other anime fans discover great series.</p>
+            
+            <div id="submittedData" class="data-display">
+                <!-- Data will be loaded here via JavaScript -->
+            </div>
+            
+            <button onclick="window.location.href='index.html'">Back to Home</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Ultimate Anime Guide | Images credited to their respective owners | All information for educational purposes</p>
+    </footer>
+
+    <script>
+        // Load and display the submitted data
+        const formData = JSON.parse(localStorage.getItem('animeReviewData'));
+        
+        if (formData) {
+            let ratingStars = '';
+            switch(formData.rating) {
+                case '5': ratingStars = '⭐⭐⭐⭐⭐'; break;
+                case '4': ratingStars = '⭐⭐⭐⭐'; break;
+                case '3': ratingStars = '⭐⭐⭐'; break;
+                case '2': ratingStars = '⭐⭐'; break;
+                case '1': ratingStars = '⭐'; break;
+            }
+            
+            document.getElementById('submittedData').innerHTML = `
+                <h3>Your Submitted Information:</h3>
+                <p><strong>Name:</strong> ${formData.name}</p>
+                <p><strong>Email:</strong> ${formData.email}</p>
+                <p><strong>Favorite Anime:</strong> ${formData.anime}</p>
+                <p><strong>Rating:</strong> ${ratingStars}</p>
+                <p><strong>Your Review:</strong> ${formData.message}</p>
+                <p><strong>Submitted on:</strong> ${formData.date}</p>
+                <hr>
+                <p><em>We'll get back to you soon!</em></p>
+            `;
+        } else {
+            document.getElementById('submittedData').innerHTML = `
+                <p>No data found. Please submit a review from the <a href="contact.html">Contact page</a>.</p>
+            `;
+        }
+    </script>
+</body>
+</html>

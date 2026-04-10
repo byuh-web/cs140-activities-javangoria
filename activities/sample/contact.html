@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Share your thoughts about anime - leave a review or ask a question">
+    <title>Contact | Anime Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1>🎬 Anime Guide</h1>
+        <p>Simple info about popular anime series</p>
+    </header>
+
+    <nav>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="anime-list.html">Anime List</a>
+            <a href="comparison.html">Comparison</a>
+            <a href="videos.html">Videos</a>
+            <a href="contact.html" class="active">Contact</a>
+            <a href="confirmation.html">Confirmation</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h2 class="page-title">Share Your Thoughts</h2>
+        <p class="page-description">Tell us about your favorite anime or ask a question.</p>
+
+        <div class="two-column">
+            <div class="main-area">
+                <div class="form-box">
+                    <form id="animeForm" onsubmit="submitForm(event)">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="animeSelect">Favorite Anime *</label>
+                            <select id="animeSelect" required>
+                                <option value="">Select one</option>
+                                <option>Naruto</option>
+                                <option>Attack on Titan</option>
+                                <option>Demon Slayer</option>
+                                <option>Jujutsu Kaisen</option>
+                                <option>One Piece</option>
+                                <option>Black Clover</option>
+                                <option>Tokyo Ghoul</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="rating">Rating (1-5) *</label>
+                            <select id="rating" required>
+                                <option value="">Select rating</option>
+                                <option>5 - Masterpiece</option>
+                                <option>4 - Great</option>
+                                <option>3 - Good</option>
+                                <option>2 - Fair</option>
+                                <option>1 - Poor</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Your Message *</label>
+                            <textarea id="message" rows="4" required placeholder="What do you think about this anime?"></textarea>
+                        </div>
+
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="widget">
+                    <h4>About This Site</h4>
+                    <p style="font-size: 0.85rem;">This is a simple fan-made guide. Not affiliated with any anime studio.</p>
+                </div>
+
+                <div class="widget">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://myanimelist.net" target="_blank">MyAnimeList</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/List_of_anime_series" target="_blank">Wikipedia Anime List</a></li>
+                        <li><a href="https://www.crunchyroll.com" target="_blank">Crunchyroll</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Anime Guide | Info from Wikipedia, MyAnimeList, and official sources</p>
+    </footer>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            const data = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                anime: document.getElementById('animeSelect').value,
+                rating: document.getElementById('rating').value,
+                message: document.getElementById('message').value,
+                date: new Date().toLocaleString()
+            };
+            localStorage.setItem('animeFeedback', JSON.stringify(data));
+            window.location.href = 'confirmation.html';
+        }
+    </script>
+</body>
+</html>

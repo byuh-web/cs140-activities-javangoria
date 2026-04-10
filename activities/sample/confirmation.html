@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you for your anime feedback">
+    <title>Thank You | Anime Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1>🎬 Anime Guide</h1>
+        <p>Simple info about popular anime series</p>
+    </header>
+
+    <nav>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="anime-list.html">Anime List</a>
+            <a href="comparison.html">Comparison</a>
+            <a href="videos.html">Videos</a>
+            <a href="contact.html">Contact</a>
+            <a href="confirmation.html" class="active">Confirmation</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="confirm-box">
+            <h2>✓ Thank You!</h2>
+            <p>Your feedback has been received.</p>
+            
+            <div class="confirm-data" id="submittedData">
+                Loading...
+            </div>
+            
+            <button onclick="window.location.href='index.html'">Back to Home</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Anime Guide | Info from Wikipedia, MyAnimeList, and official sources</p>
+    </footer>
+
+    <script>
+        const data = JSON.parse(localStorage.getItem('animeFeedback'));
+        if (data) {
+            let stars = '';
+            if (data.rating === '5 - Masterpiece') stars = '⭐⭐⭐⭐⭐';
+            else if (data.rating === '4 - Great') stars = '⭐⭐⭐⭐';
+            else if (data.rating === '3 - Good') stars = '⭐⭐⭐';
+            else if (data.rating === '2 - Fair') stars = '⭐⭐';
+            else stars = '⭐';
+            
+            document.getElementById('submittedData').innerHTML = `
+                <p><strong>Name:</strong> ${data.name}</p>
+                <p><strong>Email:</strong> ${data.email}</p>
+                <p><strong>Favorite Anime:</strong> ${data.anime}</p>
+                <p><strong>Rating:</strong> ${stars}</p>
+                <p><strong>Message:</strong> ${data.message}</p>
+                <p><strong>Submitted:</strong> ${data.date}</p>
+            `;
+        } else {
+            document.getElementById('submittedData').innerHTML = '<p>No data found. Please go back and submit the form.</p>';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,410 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.header-container h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.header-container p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Navigation */
+nav {
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-menu li {
+    margin: 0;
+}
+
+.nav-menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    transition: background 0.3s;
+}
+
+.nav-menu a:hover {
+    background-color: #555;
+}
+
+.nav-menu a.active {
+    background-color: #667eea;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+h2 {
+    color: #667eea;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+h3 {
+    color: #764ba2;
+    margin: 1rem 0 0.5rem;
+}
+
+/* ========== FIXED: TWO COLUMN LAYOUT WITH SIDEBAR ========== */
+.two-column-layout {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 2rem;
+    align-items: flex-start;
+}
+
+/* Main Content Area - Takes 2/3 of space */
+.main-content {
+    flex: 2;
+    min-width: 0;
+}
+
+/* Sidebar - Takes 1/3 of space */
+.sidebar {
+    flex: 1;
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 80px;
+}
+
+/* Grid for anime cards */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.anime-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.anime-card:hover {
+    transform: translateY(-5px);
+}
+
+.anime-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.anime-card-content {
+    padding: 1.5rem;
+}
+
+.anime-card h3 {
+    margin-top: 0;
+}
+
+/* Reference links */
+.reference {
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid #eee;
+}
+
+.reference a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.reference a:hover {
+    text-decoration: underline;
+}
+
+/* Sidebar Styles */
+.sidebar h3 {
+    color: #667eea;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.sidebar h4 {
+    color: #764ba2;
+    margin: 1rem 0 0.5rem;
+}
+
+.sidebar-section {
+    margin-bottom: 1.5rem;
+}
+
+.sidebar-list {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-list li {
+    margin-bottom: 0.75rem;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.sidebar-list li::before {
+    content: "▶";
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-size: 0.8rem;
+}
+
+.sidebar-list a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.sidebar-list a:hover {
+    color: #667eea;
+    text-decoration: underline;
+}
+
+.sidebar-stats {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.sidebar-stats p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.sidebar-stats strong {
+    color: #667eea;
+}
+
+.sidebar-quote {
+    font-style: italic;
+    background: #f9f9f9;
+    padding: 1rem;
+    border-left: 3px solid #667eea;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+
+/* Table Styles */
+.table-responsive {
+    overflow-x: auto;
+    margin: 2rem 0;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.comparison-table th,
+.comparison-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.comparison-table th {
+    background-color: #667eea;
+    color: white;
+}
+
+.comparison-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Form Styles */
+.form-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Video Section */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin: 2rem 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Confirmation Page */
+.confirmation-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.data-display {
+    background: #f0f0f0;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 1rem 0;
+    text-align: left;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+/* Tablet and Mobile */
+@media (max-width: 768px) {
+    /* Navigation becomes vertical boxes */
+    .nav-menu {
+        flex-direction: column;
+    }
+    
+    .nav-menu a {
+        padding: 0.8rem;
+        text-align: center;
+        border-bottom: 1px solid #444;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    /* FIXED: Sidebar moves below on mobile */
+    .two-column-layout {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        position: static;
+        width: 100%;
+        margin-top: 1rem;
+    }
+    
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container h1 {
+        font-size: 1.5rem;
+    }
+    
+    .form-container {
+        padding: 1rem;
+    }
+    
+    .comparison-table th,
+    .comparison-table td {
+        padding: 8px;
+        font-size: 0.85rem;
+    }
+    
+    .sidebar {
+        padding: 1rem;
+    }
+}
