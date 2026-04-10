@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-    background-color: #fafafa;
+    background-color: #b5b7bd;
     color: #1a1a1a;
     line-height: 1.5;
 }
@@ -70,14 +70,14 @@ nav {
 
 .page-title {
     font-size: 1.8rem;
-    color: #2c3e50;
+    color: #010102;
     margin-bottom: 0.5rem;
     border-left: 4px solid #e74c3c;
     padding-left: 1rem;
 }
 
 .page-description {
-    color: #7f8c8d;
+    color: #000000;
     margin-bottom: 2rem;
     font-size: 0.95rem;
 }
