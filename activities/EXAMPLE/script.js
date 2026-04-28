@@ -48,66 +48,6 @@ if (downloadBtn) {
     });
 }
 
-// ===== TESTIMONIAL SLIDER =====
-const testimonials = [
-    {
-        text: "Monica is an amazing developer! She delivered our project on time and exceeded expectations.",
-        author: "- Sarah Johnson, CEO"
-    },
-    {
-        text: "Working with Monica was a pleasure. Her frontend skills are top-notch and she's very professional.",
-        author: "- Michael Chen, Tech Lead"
-    },
-    {
-        text: "I highly recommend Monica! She transformed our website into a modern, fast, and beautiful platform.",
-        author: "- Emily Rodriguez, Product Manager"
-    }
-];
-
-let currentTestimonial = 0;
-const testimonialText = document.getElementById('testimonialText');
-const testimonialAuthor = document.getElementById('testimonialAuthor');
-const dots = document.querySelectorAll('.dot');
-
-function updateTestimonial(index) {
-    currentTestimonial = index;
-    testimonialText.textContent = `"${testimonials[index].text}"`;
-    testimonialAuthor.textContent = `- ${testimonials[index].author}`;
-    
-    dots.forEach((dot, i) => {
-        if (i === index) {
-            dot.classList.add('active');
-        } else {
-            dot.classList.remove('active');
-        }
-    });
-}
-
-dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-        updateTestimonial(index);
-    });
-});
-
-// Auto rotate testimonials every 5 seconds
-let autoRotate = setInterval(() => {
-    let next = (currentTestimonial + 1) % testimonials.length;
-    updateTestimonial(next);
-}, 5000);
-
-// Pause auto-rotate on hover
-const testimonialBox = document.querySelector('.testimonial-box');
-if (testimonialBox) {
-    testimonialBox.addEventListener('mouseenter', () => {
-        clearInterval(autoRotate);
-    });
-    testimonialBox.addEventListener('mouseleave', () => {
-        autoRotate = setInterval(() => {
-            let next = (currentTestimonial + 1) % testimonials.length;
-            updateTestimonial(next);
-        }, 5000);
-    });
-}
 
 // ===== CONTACT FORM =====
 const submitBtn = document.getElementById('submitBtn');
